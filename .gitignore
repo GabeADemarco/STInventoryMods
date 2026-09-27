@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+*.user
+*.suo
+.vs/
+*.log
+*.dmp
+BepInEx/
+*_Data/
+*.dll
+*.zip
