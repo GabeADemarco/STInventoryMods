@@ -1,11 +1,12 @@
 # Supermarket Together inventory mods
 
-Two independent BepInEx plugins for Supermarket Together:
+Three independent BepInEx plugins for Supermarket Together:
 
 | Mod | Version | What it does |
 | --- | --- | --- |
 | [Stock Planner](StockPlanner/) | 0.2.2 | Adds enough boxes to the shopping list to cover assigned shelf capacity and reserve stock. It never purchases them. |
 | [By Box (Units)](ByBoxUnits/) | 0.4.2 | Adds a Product Order sort based on counted stock and units per box. |
+| [Assigned Storage Only](AssignedStorageOnly/) | 0.1.0 | Limits storage workers to free slots labeled for the box's product. |
 
 ## Build and install
 
