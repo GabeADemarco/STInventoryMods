@@ -6,6 +6,12 @@ The plugin filters the game's storage-worker slot search; it does not relabel sh
 
 Storage workers also prioritize ground boxes belonging to products with the **lowest overall shelf fill percentage** across that product's assigned shelf rows. Only boxes with a free matching labeled storage slot are eligible. Workers spread across different eligible boxes when possible. A product with no assigned display shelf is treated as fully stocked for ranking purposes. This prioritization is enabled by default and can be disabled with `PrioritizeLowShelfStock = false` in the generated config file.
 
+## Using Stock Planner with Assigned Storage Only
+
+These mods are independent, but their settings work well together. For a product, label **two storage slots** and set Stock Planner's `ReserveBoxes = 1` in `BepInEx/config/gabe.supermarkettogether.stockplanner.cfg`. Once its display shelves are refilled, the slots can hold one full reserve box plus the remainder of a used box. If you want two full reserve boxes, label at least three slots to leave room for a partial box.
+
+Stock Planner targets **units**, not storage slots. It rounds purchases up to whole boxes, so deliveries, manual purchases, or shelves still waiting to be restocked can temporarily leave more boxes than the labeled slots can hold. Assigned Storage Only will leave those extra boxes for manual handling until a matching slot becomes free.
+
 ## Build and install on Windows
 
 Copy this directory to your PC, open Command Prompt in it, and run:
