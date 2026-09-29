@@ -41,6 +41,5 @@ Compiled DLLs supplied by the author are available in [`dist/`](dist/):
 | By Box (Units) 0.4.2 | [`STByBoxUnits_v042.dll`](dist/STByBoxUnits_v042.dll) |
 | Assigned Storage Only 0.2.0 | [`STAssignedStorageOnly_v020.dll`](dist/STAssignedStorageOnly_v020.dll) |
 | Restocker Priority 0.1.0 | [`STRestockerPriority_v010.dll`](dist/STRestockerPriority_v010.dll) |
-| Texture Memory Fix 1.1.0 | [`STTextureMemoryFix.dll`](dist/STTextureMemoryFix.dll) |
 
-Assigned Storage Only 0.2.0 and Restocker Priority 0.1.0 have been statically checked but still need gameplay testing. Install only one version of each plugin at a time. Texture Memory Fix uses F6/F7 by default; change its hotkeys in its config if you also use By Box (Units).
+Assigned Storage Only 0.2.0 and Restocker Priority 0.1.0 have been statically checked but still need gameplay testing. Install only one version of each plugin at a time. Texture Memory Fix is maintained in its separate repository. If you use it alongside By Box (Units), change its default F6/F7 hotkeys in its config.
