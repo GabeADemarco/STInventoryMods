@@ -9,9 +9,15 @@ Four independent BepInEx plugins for Supermarket Together:
 | [Assigned Storage Only](AssignedStorageOnly/) | 0.2.0 | Limits storage workers to labeled slots and prioritizes boxes for products low on display stock. |
 | [Restocker Priority](RestockerPriority/) | 0.1.0 | Prioritizes products by overall shelf fill and prefers full boxes when a partial box cannot finish a row. |
 
+## Using Stock Planner with Assigned Storage Only
+
+These mods are independent, but their settings work well together. For a product, label **two storage slots** and set Stock Planner's `ReserveBoxes = 1` in `BepInEx/config/gabe.supermarkettogether.stockplanner.cfg`. Once its display shelves are refilled, the slots can hold one full reserve box plus the remainder of a used box. If you want two full reserve boxes, label at least three slots to leave room for a partial box.
+
+Stock Planner targets **units**, not storage slots. It rounds purchases up to whole boxes, so deliveries, manual purchases, or shelves still waiting to be restocked can temporarily leave more boxes than the labeled slots can hold. Assigned Storage Only will leave those extra boxes for manual handling until a matching slot becomes free.
+
 ## Build and install
 
-Install the .NET SDK and BepInEx in your Supermarket Together game. From the directory of either mod run `dotnet build -c Release`. The projects default to the Steam game directory at `C:\Program Files (x86)\Steam\steamapps\common\Supermarket Together`. For a different installation, add `-p:GameRoot="D:\path\to\Supermarket Together"` to the build command.
+Install the .NET SDK and BepInEx in your Supermarket Together game. From the directory of a mod run `dotnet build -c Release`. The projects default to the Steam game directory at `C:\Program Files (x86)\Steam\steamapps\common\Supermarket Together`. For a different installation, add `-p:GameRoot="D:\path\to\Supermarket Together"` to the build command.
 
 Copy the resulting plugin DLL from the mod's `bin\Release\netstandard2.1\` directory to a folder under the game's `BepInEx\plugins\`. Remove previous versions of that same mod before restarting the game. Each mod's README names its DLL and explains the config settings.
 
