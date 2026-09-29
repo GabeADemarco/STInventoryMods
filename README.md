@@ -1,12 +1,13 @@
 # Supermarket Together inventory mods
 
-Three independent BepInEx plugins for Supermarket Together:
+Four independent BepInEx plugins for Supermarket Together:
 
 | Mod | Version | What it does |
 | --- | --- | --- |
 | [Stock Planner](StockPlanner/) | 0.2.2 | Adds enough boxes to the shopping list to cover assigned shelf capacity and reserve stock. It never purchases them. |
 | [By Box (Units)](ByBoxUnits/) | 0.4.2 | Adds a Product Order sort based on counted stock and units per box. |
-| [Assigned Storage Only](AssignedStorageOnly/) | 0.1.0 | Limits storage workers to free slots labeled for the box's product. |
+| [Assigned Storage Only](AssignedStorageOnly/) | 0.2.0 | Limits storage workers to labeled slots and prioritizes boxes for products low on display stock. |
+| [Restocker Priority](RestockerPriority/) | 0.1.0 | Prioritizes products by overall shelf fill and prefers full boxes when a partial box cannot finish a row. |
 
 ## Build and install
 
@@ -22,4 +23,8 @@ Copy the resulting plugin DLL from the mod's `bin\Release\netstandard2.1\` direc
 
 If you also use Texture Memory Fix, configure its F6/F7 hotkeys to other keys (for example F1/F2) to avoid triggering both mods.
 
-The source projects reference DLLs from your own game installation. No game DLLs, BepInEx binaries or compiled releases are included here.
+The source projects reference DLLs from your own game installation. No game DLLs or BepInEx binaries are included here.
+
+## Test builds
+
+Compiled builds supplied by the author are available in [`dist/`](dist/): [`STAssignedStorageOnly_v020.dll`](dist/STAssignedStorageOnly_v020.dll) and [`STRestockerPriority_v010.dll`](dist/STRestockerPriority_v010.dll). These two versions have been statically checked but still need gameplay testing. Install only one version of each plugin at a time.
